@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBox from '../components/molecules/SearchBox';
+import SearchBox from '../components/molecules/search-box/SearchBox';
 import 'src/styles/main.scss';
 const Home: React.FC = () => {
   return (
