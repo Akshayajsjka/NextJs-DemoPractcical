@@ -1,13 +1,13 @@
 "use client"
 import React from 'react';
-import CrewButton from '../atoms/CrewButton';
-import CrewTextField from '../atoms/CrewTextField';
+import {CrewButton, CrewTextField} from '../../atoms';
 import { useState } from 'react';
 
-const SearchBox: React.FC = () => {
+const SearchBox = () => {
   const [textValue, setTextValue] = useState('');
 
   const handleTextField = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(event.target.value);
     setTextValue(event.target.value);
   };
 
@@ -19,9 +19,8 @@ const SearchBox: React.FC = () => {
   return (
     <div className='align-content: center'>
     <div className="search-box" >
-        <CrewTextField value={textValue} onChange={handleTextField} />
-        <CrewButton onClick={handleButton} />
-    
+        <CrewTextField value={textValue} onChange={handleTextField} className='crew-textfield bg-change' placeholder='Search' />
+        <CrewButton onButtonClick={handleButton} className='crew-button' displayName='Search' />
     </div>
     </div>
   );
