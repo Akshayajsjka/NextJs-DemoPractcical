@@ -2,11 +2,10 @@
 import React from 'react';
 import CrewOrganism from '@/components/organisms/CrewOrganism';
 const Home: React.FC = () => {
-  return (
+return(
     <div>
-      <CrewOrganism />
+      <CrewOrganism >
     </div>
   );
 };
-
 export default Home;
