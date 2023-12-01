@@ -4,7 +4,7 @@ import CrewOrganism from '@/components/organisms/CrewOrganism';
 const Home: React.FC = () => {
 return(
     <div>
-      <CrewOrganism >
+      <CrewOrganism />
     </div>
   );
 };
