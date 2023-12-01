@@ -2,28 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/* styles.css */
-
-/* Style for the parent container */
-.divContainer {
-  text-align: center;
-  margin-top: 50px;
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
-/* Style for the TextField */
-#outlined-basic {
-  margin-bottom: 10px; /* Add some spacing below the TextField */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
 }
 
-/* Style for the Buttons */
-.MuiButton-containedPrimary { /* Style for the "Success" button */
-  background-color: #4caf50; /* Change to your desired color */
-  color: #fff; /* Change to your desired text color */
-  margin-right: 10px; /* Add some spacing to the right of the button */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
-
-.MuiButton-outlinedError { /* Style for the "Error" button */
-  border-color: #f44336; /* Change to your desired border color */
-  color: #f44336; /* Change to your desired text color */
-}
-

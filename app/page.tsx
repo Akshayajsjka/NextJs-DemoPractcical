@@ -1,12 +1,11 @@
+"use client"
 import React from 'react';
-import SearchBox from '../components/molecules/search-box/SearchBox';
-import 'src/styles/main.scss';
+import CrewOrganism from '@/components/organisms/CrewOrganism';
 const Home: React.FC = () => {
-  return (
+return(
     <div>
-      <SearchBox />
+      <CrewOrganism />
     </div>
   );
 };
-
 export default Home;
